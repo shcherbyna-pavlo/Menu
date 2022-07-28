@@ -19,9 +19,6 @@ ul {
     margin: 0;
     list-style: none;
 }
-span {
-    float: right;
-}
 .menu>li {
     position: relative;
     display: inline-block;
@@ -29,12 +26,19 @@ span {
     padding: 0px 20px;
     margin-right: -4px;
     text-align: center;
+    transition: all .8s
 }
 .menu>li:hover {
     box-shadow: 1px 1px 5px black;
 }
-.menu>li>a {
-    background: #78f896;
+.menu_span {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+.menu>li:hover .menu_span {
+    left: 10%;
+    top: 101%;
 }
 a {
     display: block;
@@ -51,63 +55,75 @@ a {
 .menu>li:hover .menu_2{
     display: block;
 }
-/* .menu_2 li {
-    width: 280px;
-    padding: 0px 10px;
-} */
-.menu_2>li a {
+.menu_2 a {
     background: #e7d5fc;
+    border-radius: 5px;
+    transition: all .8s;
+}
+.menu_2 li:hover>a {
+    box-shadow: 1px 1px 5px black;
+}
+.menu_2 li {
+    padding-bottom: 5px;
 }
 .prod1 {
     position: relative;
     width: 290px;
-    padding-right: 10px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
 .prod1 ul {
     position: absolute;
     left: 100%;
-    top: 10px;
+    top: 20px;
+    display: none;
+}
+.prod2 {
+    position: relative;
+    width: 290px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.prod2 ul {
+    position: absolute;
+    right: 100%;
+    top: 0px;
     display: none;
 }
 .menu_2>li:hover ul {
     display: block;
 }
-.menu_2>li:hover {
-    border-bottom: 5px solid #e7d5fc;
+.menu_2 [class$="right2"],[class$="left2"] {
+    display: none;
 }
-.prod1 ul a {
-    /* border-left: 1px solid black;
-    border-top: 1px solid black; */
-}
-.prod2 {
-    position: relative;
-    width: 290px;
-    padding-left: 10px;
-    margin-left: -10px;
-}
-.prod2 ul {
+.prod1 [class$="down2"] {
     position: absolute;
-    right: 100%;
-    top: 10px;
-    display: none;
+    right: 10%;
+    top: 50%;
 }
-.prod2 ul>li {
-    /* border-right: 1px solid black;
-    border-top: 1px solid black; */
+.prod2 [class$="down2"] {
+    position: absolute;
+    left: 10%;
+    top: 40%;
 }
-.prod1 a span:first-child {
+.sub li {
+    width: 290px;
+}
+.prod1:hover [class$="right2"] {
     display: block;
-    position: relative;
+    position: absolute;
+    left: 94%;
+    top: 50%;
 }
-.prod1 a span:last-child {
-    display: none;
+.prod2:hover [class$="left2"] {
+    display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 40%;
 }
-/* .menu_2>li:hover a>span:last-child {
-    display: block;
-}
-.menu_2>li:hover a>span:first-child {
+.menu_2 li:hover [class$="down2"] {
     display: none;
-} */
+}
+.sub li:hover a {
+    box-shadow: 1px 1px 5px black;
+}
