@@ -24,8 +24,7 @@ span {
 }
 li {
     width: 280px;
-    padding: 20px 20px;
-    background: #78f896;
+    padding: 0px 20px;
 }
 .menu>li {
     position: relative;
@@ -34,10 +33,15 @@ li {
     margin-right: -4px;
     text-align: center;
 }
+.menu>li:hover {
+    box-shadow: 1px 1px 5px black;
+}
 a {
     display: block;
     text-decoration: none;
-    color: #767dc9;
+    color: #5c63b6;
+    background: #78f896;
+    padding: 20px 0;
 }
 .menu_2 {
     display: none;
@@ -60,7 +64,7 @@ a {
     top: -1px;
     display: none;
 }
-.prod1 ul>li {
+.prod1 ul a {
     border-left: 1px solid black;
     border-top: 1px solid black;
 }
