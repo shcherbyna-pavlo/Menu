@@ -22,67 +22,78 @@ ul {
 span {
     float: right;
 }
-li {
-    width: 280px;
-    padding: 0px 20px;
-}
 .menu>li {
     position: relative;
     display: inline-block;
     width: calc(100%/4);
+    padding: 0px 20px;
     margin-right: -4px;
     text-align: center;
 }
 .menu>li:hover {
     box-shadow: 1px 1px 5px black;
 }
+.menu>li>a {
+    background: #78f896;
+}
 a {
     display: block;
     text-decoration: none;
     color: #5c63b6;
-    background: #78f896;
     padding: 20px 0;
 }
 .menu_2 {
     display: none;
-}
-.menu_2>li {
-    border-top: 1px solid black;
-}
-.menu>li:hover .menu_2{
-    display: block;
     position: absolute;
     left: 0;
     top: 100%;
 }
+.menu>li:hover .menu_2{
+    display: block;
+}
+/* .menu_2 li {
+    width: 280px;
+    padding: 0px 10px;
+} */
+.menu_2>li a {
+    background: #e7d5fc;
+}
 .prod1 {
     position: relative;
+    width: 290px;
+    padding-right: 10px;
 }
 .prod1 ul {
     position: absolute;
     left: 100%;
-    top: -1px;
+    top: 10px;
     display: none;
 }
+.menu_2>li:hover ul {
+    display: block;
+}
+.menu_2>li:hover {
+    border-bottom: 5px solid #e7d5fc;
+}
 .prod1 ul a {
-    border-left: 1px solid black;
-    border-top: 1px solid black;
+    /* border-left: 1px solid black;
+    border-top: 1px solid black; */
 }
 .prod2 {
     position: relative;
+    width: 290px;
+    padding-left: 10px;
+    margin-left: -10px;
 }
 .prod2 ul {
     position: absolute;
     right: 100%;
-    top: -1px;
+    top: 10px;
     display: none;
 }
 .prod2 ul>li {
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-}
-.menu_2>li:hover ul {
-    display: block;
+    /* border-right: 1px solid black;
+    border-top: 1px solid black; */
 }
 .prod1 a span:first-child {
     display: block;
@@ -94,9 +105,9 @@ a {
     left: 0;
     top: 0;
 }
-.menu_2>li:hover a>span:last-child {
+/* .menu_2>li:hover a>span:last-child {
     display: block;
 }
 .menu_2>li:hover a>span:first-child {
     display: none;
-}
+} */
